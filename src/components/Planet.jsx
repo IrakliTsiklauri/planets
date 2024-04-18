@@ -1,20 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import data from "../data.json";
 import { NavLink, useParams } from "react-router-dom";
 import styled from "styled-components";
+import shape from "../images/Shape.png";
 
 const Planet = () => {
   const params = useParams();
-  console.log(params);
-
   const paramsName = params.name;
-
   const planetData = data.find((planetObj) => planetObj.name === paramsName);
-  console.log(planetData);
 
+  const [activeBtn, setActiveBtn] = useState("overview");
   // if (!planet) {
   //   return <div>Planet not found!</div>;
   // }
+
+  const handleBtnClick = (btnName) => {
+    setActiveBtn(btnName);
+  };
 
   const planetImg = planetData.images.planet;
   return (
@@ -25,10 +27,34 @@ const Planet = () => {
 
       <Information>
         <h2>{planetData.name.toUpperCase()}</h2>
-        <p>{planetData.overview.content}</p>
-        <span>
-          Source: <Link to={`${planetData.overview.source}`}>Wikipedia</Link>
-        </span>
+        <p>
+          {activeBtn === "overview"
+            ? planetData.overview.content
+            : activeBtn === "structure"
+            ? planetData.structure.content
+            : planetData.geology.content}
+        </p>
+        <Wikipedia>
+          <span>
+            Source: <Link to={`${planetData.overview.source}`}>Wikipedia</Link>
+          </span>
+          <img src={shape} alt="arrow" />
+        </Wikipedia>
+
+        <Buttons>
+          <button onClick={() => handleBtnClick("overview")}>
+            <span style={{ fontFamily: "League Spartan" }}>01</span>{" "}
+            {planetData.button.firstButton.toUpperCase()}
+          </button>
+          <button onClick={() => handleBtnClick("structure")}>
+            <span style={{ fontFamily: "League Spartan" }}>02</span>{" "}
+            {planetData.button.secondButton.toUpperCase()}
+          </button>
+          <button onClick={() => handleBtnClick("geology")}>
+            <span style={{ fontFamily: "League Spartan" }}>03</span>{" "}
+            {planetData.button.thirdButton.toUpperCase()}
+          </button>
+        </Buttons>
       </Information>
     </Container>
   );
@@ -70,7 +96,7 @@ const Information = styled.div`
     font-size: 14px;
     font-weight: 400;
     line-height: 25px;
-    color: #b9b4b4;
+    color: rgb(131, 131, 145);
   }
 
   span {
@@ -81,6 +107,33 @@ const Information = styled.div`
   }
 `;
 
+const Wikipedia = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+`;
+
 const Link = styled(NavLink)`
-  color: #b9b4b4;
+  color: rgb(131, 131, 145);
+`;
+
+const Buttons = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 320px;
+
+  button {
+    font-family: "League Spartan", sans-serif;
+    background-color: #070724;
+    color: #fff;
+    border: 1px solid rgb(131, 131, 145);
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+  }
 `;
