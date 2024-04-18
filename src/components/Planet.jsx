@@ -55,18 +55,18 @@ const Planet = () => {
           </Wikipedia>
 
           <Buttons>
-            <button onClick={() => handleBtnClick("overview")}>
+            <Btn onClick={() => handleBtnClick("overview")}>
               <span style={{ fontFamily: "League Spartan" }}>01</span>{" "}
               {planetData.button.firstButton.toUpperCase()}
-            </button>
-            <button onClick={() => handleBtnClick("structure")}>
+            </Btn>
+            <Btn onClick={() => handleBtnClick("structure")}>
               <span style={{ fontFamily: "League Spartan" }}>02</span>{" "}
               {planetData.button.secondButton.toUpperCase()}
-            </button>
-            <button onClick={() => handleBtnClick("geology")}>
+            </Btn>
+            <Btn onClick={() => handleBtnClick("geology")}>
               <span style={{ fontFamily: "League Spartan" }}>03</span>{" "}
               {planetData.button.thirdButton.toUpperCase()}
-            </button>
+            </Btn>
           </Buttons>
         </Information>
       </Container>
@@ -154,19 +154,24 @@ const Buttons = styled.div`
   flex-direction: column;
   gap: 20px;
   width: 320px;
+`;
 
-  button {
-    font-family: "League Spartan", sans-serif;
-    background-color: #070724;
-    color: #fff;
-    border: 1px solid rgb(131, 131, 145);
-    border-radius: 5px;
-    padding: 15px;
+const Btn = styled.button`
+  font-family: "League Spartan", sans-serif;
+  background-color: #070724;
+  color: #fff;
+  border: 1px solid rgb(131, 131, 145);
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+  transition: 0.5s;
+
+  &:hover {
     cursor: pointer;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 15px;
+    background-color: #827e7e;
   }
 `;
 
@@ -182,6 +187,7 @@ const PlanetInfo = styled.div`
 const RotaTion = styled.div`
   width: 255px;
   border: 1px solid rgb(131, 131, 145);
+  border-radius: 3px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -204,6 +210,7 @@ const RotaTion = styled.div`
 const Revolution = styled.div`
   width: 255px;
   border: 1px solid rgb(131, 131, 145);
+  border-radius: 3px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -226,6 +233,7 @@ const Revolution = styled.div`
 const Radius = styled.div`
   width: 255px;
   border: 1px solid rgb(131, 131, 145);
+  border-radius: 3px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -248,6 +256,7 @@ const Radius = styled.div`
 const Temp = styled.div`
   width: 255px;
   border: 1px solid rgb(131, 131, 145);
+  border-radius: 3px;
   padding: 20px;
   display: flex;
   flex-direction: column;
