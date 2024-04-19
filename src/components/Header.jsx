@@ -28,6 +28,7 @@ const HeaderSection = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   padding: 30px;
   border-bottom: 1px solid #37374e;
 
@@ -35,6 +36,11 @@ const HeaderSection = styled.header`
     font-family: "Antonio", sans-serif;
     font-size: 28px;
     font-weight: 400;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 30px;
   }
 `;
 

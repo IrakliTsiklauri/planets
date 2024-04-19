@@ -25,7 +25,11 @@
     "images": {
       "planet": "./assets/planet-mercury.svg",
       "internal": "./assets/planet-mercury-internal.svg",
-      "geology": "./assets/geology-mercury.png"
+      "geology": "./assets/geology-mercury.png",
+      "size": {
+        "width": "163px",
+        "height": "199px"
+      }
     }
   },
   {

@@ -28,13 +28,14 @@ const Planet = () => {
       ? planetImgOverview
       : activeBtn === "structure"
       ? planetImgStrucure
-      : planetImgGeology;
+      : planetImgOverview;
 
   return (
     <>
       <Container>
         <ImgSection>
           <img src={activeImage} alt={planetData.name} />
+          <Img src={planetImgGeology} alt={planetData.name} />
         </ImgSection>
 
         <Information>
@@ -99,12 +100,27 @@ const Container = styled.div`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const ImgSection = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+const Img = styled.img`
+  position: absolute;
+  top: 65%;
+  left: 41.5%;
+  width: 163px;
+  height: 199px;
 `;
 
 const Information = styled.div`
