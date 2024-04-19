@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import stars from "../images/background-stars.svg";
 
 export const GlobalStyles = createGlobalStyle`
 *{
@@ -11,6 +12,7 @@ body{
     font-family: "Antonio", sans-serif;
     background-color: #070724;
     color: #fff;
+    background-image: url(${stars});
 }
 `;
 
