@@ -34,8 +34,15 @@ const Planet = () => {
     <>
       <Container>
         <ImgSection>
-          <img src={activeImage} alt={planetData.name} />
-          <Img src={planetImgGeology} alt={planetData.name} />
+         {activeBtn !== "geology" && (
+            <img src={activeImage} alt={planetData.name} visible={true} />
+          )}
+          {activeBtn === "geology" && (
+            <>
+              <Img src={planetImgGeology} alt={planetData.name} visible={true} />
+              <img src={activeImage} alt={planetData.name} visible={false} />
+            </>
+          )}
         </ImgSection>
 
         <Information>
