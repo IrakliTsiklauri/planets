@@ -29,14 +29,19 @@ export default PlanetImages;
 const ImgSection = styled.div`
   position: relative;
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
+  align-items: center;
+  justify-content: center;
 `;
 
 const Img = styled.img`
   position: absolute;
-  top: 65%;
-  left: 41.5%;
+  transform: translateY(-50%);
+  top: 80%;
   width: 163px;
   height: 199px;
+
+  @media (max-width: 768) {
+    position: absolute;
+    left: 39px;
+  }
 `;

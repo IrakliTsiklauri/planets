@@ -58,17 +58,16 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 `;
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
-  /* flex-direction: row; */
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   width: 65%;
-  /* gap: 200px; */
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;

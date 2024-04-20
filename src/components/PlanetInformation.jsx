@@ -37,7 +37,7 @@ const Information = styled.div`
   justify-content: center;
   gap: 30px;
   width: 100%;
-  padding: 20px;
+
   h2 {
     font-size: 80px;
     font-weight: 400;
@@ -61,9 +61,8 @@ const Information = styled.div`
   }
 
   @media (max-width: 768px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 50px;
 
@@ -74,13 +73,12 @@ const Information = styled.div`
     p {
       font-size: 11px;
       line-height: 22px;
+      color: #fff;
     }
   }
 `;
 
 const PlanetDescription = styled.div`
-  /* width: 350px; */
-
   @media (max-width: 768px) {
     width: 339px;
   }
@@ -90,6 +88,14 @@ const Wikipedia = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
+
+  @media (max-width: 768px) {
+    margin-top: 15px;
+
+    span {
+      font-size: 12px;
+    }
+  }
 `;
 
 const Link = styled(NavLink)`

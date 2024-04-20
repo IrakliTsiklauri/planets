@@ -32,9 +32,10 @@ const PlanetInfo = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 60px;
-  /* width: 100%; */
+  width: 100%;
 
   @media (max-width: 768px) {
+    gap: 20px;
   }
 `;
 
@@ -95,7 +96,20 @@ const Revolution = styled.div`
     font-family: "Antonio", sans-serif;
     color: #fff;
   }
+
+  @media (max-width: 768px) {
+    width: 164px;
+
+    span {
+      font-size: 8px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+  }
 `;
+
 const Radius = styled.div`
   width: 255px;
   border: 1px solid rgb(131, 131, 145);
@@ -117,6 +131,18 @@ const Radius = styled.div`
     font-weight: 400;
     font-family: "Antonio", sans-serif;
     color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    width: 164px;
+
+    span {
+      font-size: 8px;
+    }
+
+    p {
+      font-size: 24px;
+    }
   }
 `;
 const Temp = styled.div`
@@ -140,5 +166,17 @@ const Temp = styled.div`
     font-weight: 400;
     font-family: "Antonio", sans-serif;
     color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    width: 164px;
+
+    span {
+      font-size: 8px;
+    }
+
+    p {
+      font-size: 24px;
+    }
   }
 `;
