@@ -6,24 +6,23 @@ import PlanetButtons from "./PlanetButtons";
 
 const PlanetInformation = ({ planetData, activeBtn, handleBtnClick }) => {
   return (
-    
-
     <Information>
-      <h2>{planetData.name.toUpperCase()}</h2>
-      <p>
-        {activeBtn === "overview"
-          ? planetData.overview.content
-          : activeBtn === "structure"
-          ? planetData.structure.content
-          : planetData.geology.content}
-      </p>
-      <Wikipedia>
-        <span>
-          Source: <Link to={`${planetData.overview.source}`}>Wikipedia</Link>
-        </span>
-        <img src={shape} alt="arrow" />
-      </Wikipedia>
-
+      <PlanetDescription>
+        <h2>{planetData.name.toUpperCase()}</h2>
+        <p>
+          {activeBtn === "overview"
+            ? planetData.overview.content
+            : activeBtn === "structure"
+            ? planetData.structure.content
+            : planetData.geology.content}
+        </p>
+        <Wikipedia>
+          <span>
+            Source: <Link to={`${planetData.overview.source}`}>Wikipedia</Link>
+          </span>
+          <img src={shape} alt="arrow" />
+        </Wikipedia>
+      </PlanetDescription>
       <PlanetButtons handleBtnClick={handleBtnClick} planetData={planetData} />
     </Information>
   );
@@ -34,12 +33,11 @@ export default PlanetInformation;
 const Information = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: center;
-  padding: 0 310px;
   gap: 30px;
-  height: 100vh;
-
+  width: 100%;
+  padding: 20px;
   h2 {
     font-size: 80px;
     font-weight: 400;
@@ -60,6 +58,31 @@ const Information = styled.div`
     color: #595555;
     display: flex;
     gap: 10px;
+  }
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    h2 {
+      font-size: 48px;
+    }
+
+    p {
+      font-size: 11px;
+      line-height: 22px;
+    }
+  }
+`;
+
+const PlanetDescription = styled.div`
+  /* width: 350px; */
+
+  @media (max-width: 768px) {
+    width: 339px;
   }
 `;
 

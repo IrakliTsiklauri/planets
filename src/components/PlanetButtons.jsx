@@ -1,10 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-const PlanetButtons = ({handleBtnClick, planetData}) => {
+const PlanetButtons = ({ handleBtnClick, planetData }) => {
   return (
-
-    
     <Buttons>
       <Btn onClick={() => handleBtnClick("overview")}>
         <span style={{ fontFamily: "League Spartan" }}>01</span>{" "}
@@ -28,7 +26,11 @@ const Buttons = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 320px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    width: 281px;
+  }
 `;
 
 const Btn = styled.button`
@@ -43,9 +45,14 @@ const Btn = styled.button`
   align-items: center;
   gap: 15px;
   transition: 0.5s;
+  width: 100%;
 
   &:hover {
     cursor: pointer;
     background-color: #827e7e;
+  }
+
+  @media (max-width: 768px) {
+    padding: 12px;
   }
 `;

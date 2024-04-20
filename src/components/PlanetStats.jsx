@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const PlanetStats = ({planetData}) => {
+const PlanetStats = ({ planetData }) => {
   return (
     <PlanetInfo>
       <RotaTion>
@@ -28,11 +28,14 @@ export default PlanetStats;
 
 const PlanetInfo = styled.div`
   display: flex;
-  gap: 30px;
+  gap: 70px;
   align-items: center;
-  justify-content: space-around;
-  padding: 0 280px;
+  justify-content: center;
   margin-bottom: 60px;
+  /* width: 100%; */
+
+  @media (max-width: 768px) {
+  }
 `;
 
 const RotaTion = styled.div`
@@ -56,6 +59,18 @@ const RotaTion = styled.div`
     font-weight: 400;
     font-family: "Antonio", sans-serif;
     color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    width: 164px;
+
+    span {
+      font-size: 8px;
+    }
+
+    p {
+      font-size: 24px;
+    }
   }
 `;
 const Revolution = styled.div`
