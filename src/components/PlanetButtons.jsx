@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const PlanetButtons = ({ handleBtnClick, planetData, activeBtn }) => {
-  let background = planetData.backgroundColor;
-  console.log(background);
+  const background = planetData.backgroundColor;
 
   return (
     <Buttons>
@@ -14,13 +13,7 @@ const PlanetButtons = ({ handleBtnClick, planetData, activeBtn }) => {
             activeBtn === "overview" ? `${background}` : "#070724",
         }}
       >
-        <span
-          style={{
-            fontFamily: "League Spartan",
-          }}
-        >
-          01
-        </span>
+        <span>01</span>
         {planetData.button.firstButton.toUpperCase()}
       </Btn>
       <Btn
@@ -30,7 +23,7 @@ const PlanetButtons = ({ handleBtnClick, planetData, activeBtn }) => {
             activeBtn === "structure" ? `${background}` : "#070724",
         }}
       >
-        <span style={{ fontFamily: "League Spartan" }}>02</span>
+        <span>02</span>
         {planetData.button.secondButton.toUpperCase()}
       </Btn>
       <Btn
@@ -40,7 +33,7 @@ const PlanetButtons = ({ handleBtnClick, planetData, activeBtn }) => {
             activeBtn === "geology" ? `${background}` : "#070724",
         }}
       >
-        <span style={{ fontFamily: "League Spartan" }}>03</span>
+        <span>03</span>
         {planetData.button.thirdButton.toUpperCase()}
       </Btn>
     </Buttons>
@@ -78,6 +71,10 @@ const Btn = styled.button`
   &:hover {
     cursor: pointer;
     background-color: #827e7e;
+  }
+
+  span {
+    font-family: "League Spartan", sans-serif;
   }
 
   @media (max-width: 768px) {

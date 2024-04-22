@@ -27,7 +27,15 @@
       "internal": "./assets/planet-mercury-internal.svg",
       "geology": "./assets/geology-mercury.png"
     },
-    "backgroundColor": "rgba(65, 158, 187, 1)"
+    "backgroundColor": "rgba(65, 158, 187, 1)",
+    "size": {
+      "width": "40%",
+      "height": "40%"
+    },
+    "geologiImgSize": {
+      "geologyImgWidth": "10%",
+      "geologyImgHeight": "10%"
+    }
   },
   {
     "name": "Venus",
@@ -57,7 +65,8 @@
       "internal": "./assets/planet-venus-internal.svg",
       "geology": "./assets/geology-venus.png"
     },
-    "backgroundColor": "rgba(237, 162, 73, 1)"
+    "backgroundColor": "rgba(237, 162, 73, 1)",
+    "size": { "width": "43%", "height": "43%" }
   },
   {
     "name": "Earth",
@@ -87,7 +96,8 @@
       "internal": "./assets/planet-earth-internal.svg",
       "geology": "./assets/geology-earth.png"
     },
-    "backgroundColor": "rgba(109, 46, 213, 1)"
+    "backgroundColor": "rgba(109, 46, 213, 1)",
+    "size": { "width": "48%", "height": "48%" }
   },
   {
     "name": "Mars",
@@ -117,7 +127,8 @@
       "internal": "./assets/planet-mars-internal.svg",
       "geology": "./assets/geology-mars.png"
     },
-    "backgroundColor": "rgba(209, 76, 50, 1)"
+    "backgroundColor": "rgba(209, 76, 50, 1)",
+    "size": { "width": "37%", "height": "37%" }
   },
   {
     "name": "Jupiter",
@@ -147,7 +158,8 @@
       "internal": "./assets/planet-jupiter-internal.svg",
       "geology": "./assets/geology-jupiter.png"
     },
-    "backgroundColor": "rgba(216, 58, 52, 1)"
+    "backgroundColor": "rgba(216, 58, 52, 1)",
+    "size": { "width": "80%", "height": "80%" }
   },
   {
     "name": "Saturn",
@@ -177,7 +189,8 @@
       "internal": "./assets/planet-saturn-internal.svg",
       "geology": "./assets/geology-saturn.png"
     },
-    "backgroundColor": "rgba(205, 81, 32, 1)"
+    "backgroundColor": "rgba(205, 81, 32, 1)",
+    "size": { "width": "46%", "height": "46%" }
   },
   {
     "name": "Uranus",
@@ -207,7 +220,8 @@
       "internal": "./assets/planet-uranus-internal.svg",
       "geology": "./assets/geology-uranus.png"
     },
-    "backgroundColor": "rgba(30, 193, 162, 1)"
+    "backgroundColor": "rgba(30, 193, 162, 1)",
+    "size": { "width": "49%", "height": "49%" }
   },
   {
     "name": "Neptune",
@@ -237,6 +251,7 @@
       "internal": "./assets/planet-neptune-internal.svg",
       "geology": "./assets/geology-neptune.png"
     },
-    "backgroundColor": "rgba(45, 104, 240, 1)"
+    "backgroundColor": "rgba(45, 104, 240, 1)",
+    "size": { "width": "48%", "height": "48%", "geologyImgWidth": "" }
   }
 ]

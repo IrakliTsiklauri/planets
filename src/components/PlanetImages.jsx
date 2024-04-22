@@ -5,19 +5,34 @@ const PlanetImages = ({
   activeBtn,
   planetData,
   activeImage,
-  // planetImgOverview,
-  // planetImgStrucure,
   planetImgGeology,
 }) => {
+  const imgWidth = planetData.size.width;
+  const imgHeight = planetData.size.height;
+
+  console.log(imgWidth, imgHeight);
   return (
     <ImgSection>
       {activeBtn !== "geology" && (
-        <img src={activeImage} alt={planetData.name} visible={true} />
+        <Image
+          src={activeImage}
+          alt={planetData.name}
+          visible={true}
+          imgWidth={imgWidth}
+          imgHeight={imgHeight}
+        />
       )}
       {activeBtn === "geology" && (
         <>
           <Img src={planetImgGeology} alt={planetData.name} visible={true} />
-          <img src={activeImage} alt={planetData.name} visible={false} />
+
+          <Image
+            src={activeImage}
+            alt={planetData.name}
+            visible={false}
+            imgWidth={imgWidth}
+            imgHeight={imgHeight}
+          />
         </>
       )}
     </ImgSection>
@@ -31,6 +46,15 @@ const ImgSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+const Image = styled.img`
+  width: ${(props) => props.imgWidth};
+  height: ${(props) => props.imgHeight};
+
+  @media (max-width: 768px) {
+    width: 184px;
+  }
 `;
 
 const Img = styled.img`
