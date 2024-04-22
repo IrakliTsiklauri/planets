@@ -9,6 +9,9 @@ const PlanetImages = ({
 }) => {
   const imgWidth = planetData.size.width;
   const imgHeight = planetData.size.height;
+  const geologyImgWidth = planetData.geologiImgSize.geologyImgWidth;
+  const geologyImgHeight = planetData.geologiImgSize.geologyImgHeight;
+  console.log(geologyImgWidth, geologyImgHeight);
 
   console.log(imgWidth, imgHeight);
   return (
@@ -24,7 +27,13 @@ const PlanetImages = ({
       )}
       {activeBtn === "geology" && (
         <>
-          <Img src={planetImgGeology} alt={planetData.name} visible={true} />
+          <Img
+            src={planetImgGeology}
+            alt={planetData.name}
+            visible={true}
+            geologyImgWidth={geologyImgWidth}
+            geologyImgHeight={geologyImgHeight}
+          />
 
           <Image
             src={activeImage}
@@ -60,9 +69,9 @@ const Image = styled.img`
 const Img = styled.img`
   position: absolute;
   transform: translateY(-50%);
-  top: 80%;
-  width: 163px;
-  height: 199px;
+  top: 83%;
+  width: ${(props) => props.geologyImgWidth};
+  height: ${(props) => props.geologyImgHeight};
 
   @media (max-width: 768) {
     position: absolute;
