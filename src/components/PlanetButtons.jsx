@@ -1,19 +1,46 @@
 import React from "react";
 import styled from "styled-components";
 
-const PlanetButtons = ({ handleBtnClick, planetData }) => {
+const PlanetButtons = ({ handleBtnClick, planetData, activeBtn }) => {
+  let background = planetData.backgroundColor;
+  console.log(background);
+
   return (
     <Buttons>
-      <Btn onClick={() => handleBtnClick("overview")}>
-        <span style={{ fontFamily: "League Spartan" }}>01</span>{" "}
+      <Btn
+        onClick={() => handleBtnClick("overview")}
+        style={{
+          backgroundColor:
+            activeBtn === "overview" ? `${background}` : "#070724",
+        }}
+      >
+        <span
+          style={{
+            fontFamily: "League Spartan",
+          }}
+        >
+          01
+        </span>
         {planetData.button.firstButton.toUpperCase()}
       </Btn>
-      <Btn onClick={() => handleBtnClick("structure")}>
-        <span style={{ fontFamily: "League Spartan" }}>02</span>{" "}
+      <Btn
+        onClick={() => handleBtnClick("structure")}
+        style={{
+          backgroundColor:
+            activeBtn === "structure" ? `${background}` : "#070724",
+        }}
+      >
+        <span style={{ fontFamily: "League Spartan" }}>02</span>
         {planetData.button.secondButton.toUpperCase()}
       </Btn>
-      <Btn onClick={() => handleBtnClick("geology")}>
-        <span style={{ fontFamily: "League Spartan" }}>03</span>{" "}
+      <Btn
+        onClick={() => handleBtnClick("geology")}
+        style={{
+          backgroundColor:
+            activeBtn === "geology" ? `${background}` : "#070724",
+        }}
+      >
+        <span style={{ fontFamily: "League Spartan" }}>03</span>
         {planetData.button.thirdButton.toUpperCase()}
       </Btn>
     </Buttons>
@@ -35,7 +62,8 @@ const Buttons = styled.div`
 
 const Btn = styled.button`
   font-family: "League Spartan", sans-serif;
-  background-color: #070724;
+  /* background-color: #070724; */
+
   color: #fff;
   border: 1px solid rgb(131, 131, 145);
   border-radius: 5px;

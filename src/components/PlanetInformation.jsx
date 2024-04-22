@@ -23,7 +23,7 @@ const PlanetInformation = ({ planetData, activeBtn, handleBtnClick }) => {
           <img src={shape} alt="arrow" />
         </Wikipedia>
       </PlanetDescription>
-      <PlanetButtons handleBtnClick={handleBtnClick} planetData={planetData} />
+      <PlanetButtons handleBtnClick={handleBtnClick} planetData={planetData} activeBtn={activeBtn}/>
     </Information>
   );
 };
@@ -88,9 +88,10 @@ const Wikipedia = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
+  margin-top: 15px;
 
   @media (max-width: 768px) {
-    margin-top: 15px;
+    margin: 15px 0;
 
     span {
       font-size: 12px;

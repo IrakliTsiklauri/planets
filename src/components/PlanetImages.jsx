@@ -5,8 +5,8 @@ const PlanetImages = ({
   activeBtn,
   planetData,
   activeImage,
-  planetImgOverview,
-  planetImgStrucure,
+  // planetImgOverview,
+  // planetImgStrucure,
   planetImgGeology,
 }) => {
   return (
