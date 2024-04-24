@@ -3,10 +3,12 @@ import data from "../data.json";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import burgerImg from "../images/icon-hamburger.svg";
-
+console.log(data);
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  console.log(menuOpen);
+
+  const circleBgColor = data[1].circleColor;
+  console.log(circleBgColor);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -22,6 +24,7 @@ const Header = () => {
         <Ul>
           {data.map((planet, index) => (
             <Li key={index}>
+              <Circle></Circle>
               <NavLinkStyled to={`${planet.name}`} onClick={toggleMenu}>
                 {planet.name.toUpperCase()}
               </NavLinkStyled>
@@ -55,8 +58,9 @@ const HeaderSection = styled.header`
   }
 
   @media (max-width: 400px) {
-    /* flex-direction: column; */
-    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 `;
 
@@ -118,11 +122,30 @@ const Ul = styled.ul`
 
 const Li = styled.li`
   list-style-type: none;
+
+  @media (max-width: 400px) {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+`;
+
+const Circle = styled.div`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  display: none;
+
+  @media (max-width: 400px) {
+    display: block;
+  }
 `;
 
 const NavLinkStyled = styled(NavLink)`
   color: #d7d3d3;
   text-decoration: none;
+  font-family: "League Spartan", sans-serif;
 
   &.active {
     font-weight: 700;

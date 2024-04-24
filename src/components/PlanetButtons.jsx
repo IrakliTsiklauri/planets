@@ -51,6 +51,10 @@ const Buttons = styled.div`
   @media (max-width: 768px) {
     width: 281px;
   }
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 `;
 
 const Btn = styled.button`

@@ -11,9 +11,7 @@ const PlanetImages = ({
   const imgHeight = planetData.size.height;
   const geologyImgWidth = planetData.geologiImgSize.geologyImgWidth;
   const geologyImgHeight = planetData.geologiImgSize.geologyImgHeight;
-  console.log(geologyImgWidth, geologyImgHeight);
 
-  console.log(imgWidth, imgHeight);
   return (
     <ImgSection>
       {activeBtn !== "geology" && (
@@ -58,6 +56,10 @@ const ImgSection = styled.div`
 
   @media (max-width: 768px) {
     margin-bottom: 150px;
+  }
+
+  @media (max-width: 400px) {
+    margin-bottom: 10px;
   }
 `;
 

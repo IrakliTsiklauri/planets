@@ -37,6 +37,12 @@ const PlanetInfo = styled.div`
   @media (max-width: 768px) {
     gap: 20px;
   }
+
+  @media (max-width: 400px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 `;
 
 const RotaTion = styled.div`
@@ -73,6 +79,23 @@ const RotaTion = styled.div`
       font-size: 24px;
     }
   }
+
+  @media (max-width: 400px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%;
+
+    span {
+      font-size: 8px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
 `;
 const Revolution = styled.div`
   width: 255px;
@@ -106,6 +129,23 @@ const Revolution = styled.div`
 
     p {
       font-size: 24px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%;
+
+    span {
+      font-size: 8px;
+    }
+
+    p {
+      font-size: 20px;
     }
   }
 `;
@@ -144,6 +184,23 @@ const Radius = styled.div`
       font-size: 24px;
     }
   }
+
+  @media (max-width: 400px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%;
+
+    span {
+      font-size: 8px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
 `;
 const Temp = styled.div`
   width: 255px;
@@ -177,6 +234,23 @@ const Temp = styled.div`
 
     p {
       font-size: 24px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%;
+
+    span {
+      font-size: 8px;
+    }
+
+    p {
+      font-size: 20px;
     }
   }
 `;

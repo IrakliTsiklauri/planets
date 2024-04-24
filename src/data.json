@@ -28,6 +28,7 @@
       "geology": "./assets/geology-mercury.png"
     },
     "backgroundColor": "rgba(65, 158, 187, 1)",
+    "circleColor": "rgba(222, 244, 252, 1)",
     "size": {
       "width": "40%",
       "height": "40%"
@@ -66,6 +67,7 @@
       "geology": "./assets/geology-venus.png"
     },
     "backgroundColor": "rgba(237, 162, 73, 1)",
+    "circleColor": "rgba(247, 204, 127, 1)",
     "size": { "width": "43%", "height": "43%" },
     "geologiImgSize": {
       "geologyImgWidth": "22%",
@@ -101,6 +103,7 @@
       "geology": "./assets/geology-earth.png"
     },
     "backgroundColor": "rgba(109, 46, 213, 1)",
+    "circleColor": "rgba(84, 91, 254, 1)",
     "size": { "width": "48%", "height": "48%" },
     "geologiImgSize": {
       "geologyImgWidth": "22%",
@@ -136,6 +139,7 @@
       "geology": "./assets/geology-mars.png"
     },
     "backgroundColor": "rgba(209, 76, 50, 1)",
+    "circleColor": "rgba(255, 106, 69, 1)",
     "size": { "width": "37%", "height": "37%" },
     "geologiImgSize": {
       "geologyImgWidth": "22%",
@@ -171,6 +175,7 @@
       "geology": "./assets/geology-jupiter.png"
     },
     "backgroundColor": "rgba(216, 58, 52, 1)",
+    "circleColor": "rgba(236, 173, 122, 1)",
     "size": { "width": "80%", "height": "80%" },
     "geologiImgSize": {
       "geologyImgWidth": "20%",
@@ -206,6 +211,7 @@
       "geology": "./assets/geology-saturn.png"
     },
     "backgroundColor": "rgba(205, 81, 32, 1)",
+    "circleColor": "rgba(252, 203, 107, 1)",
     "size": { "width": "46%", "height": "46%" },
     "geologiImgSize": {
       "geologyImgWidth": "16%",
@@ -241,6 +247,7 @@
       "geology": "./assets/geology-uranus.png"
     },
     "backgroundColor": "rgba(30, 193, 162, 1)",
+    "circleColor": "rgba(101, 240, 213, 1)",
     "size": { "width": "49%", "height": "49%" },
     "geologiImgSize": {
       "geologyImgWidth": "22%",
@@ -276,6 +283,7 @@
       "geology": "./assets/geology-neptune.png"
     },
     "backgroundColor": "rgba(45, 104, 240, 1)",
+    "circleColor": "rgba(73, 126, 250, 1)",
     "size": { "width": "48%", "height": "48%" },
     "geologiImgSize": {
       "geologyImgWidth": "22%",

@@ -23,7 +23,11 @@ const PlanetInformation = ({ planetData, activeBtn, handleBtnClick }) => {
           <img src={shape} alt="arrow" />
         </Wikipedia>
       </PlanetDescription>
-      <PlanetButtons handleBtnClick={handleBtnClick} planetData={planetData} activeBtn={activeBtn}/>
+      <PlanetButtons
+        handleBtnClick={handleBtnClick}
+        planetData={planetData}
+        activeBtn={activeBtn}
+      />
     </Information>
   );
 };
@@ -81,6 +85,25 @@ const Information = styled.div`
 const PlanetDescription = styled.div`
   @media (max-width: 768px) {
     width: 339px;
+  }
+
+  @media (max-width: 400px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+
+    h2 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 11px;
+      line-height: 22px;
+      color: #fff;
+      text-align: center;
+    }
   }
 `;
 
