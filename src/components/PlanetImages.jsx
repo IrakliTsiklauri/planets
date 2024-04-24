@@ -55,6 +55,10 @@ const ImgSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    margin-bottom: 150px;
+  }
 `;
 
 const Image = styled.img`
@@ -62,19 +66,25 @@ const Image = styled.img`
   height: ${(props) => props.imgHeight};
 
   @media (max-width: 768px) {
-    width: 184px;
+    width: ${(props) => props.imgWidth};
+    height: ${(props) => props.imgHeight};
+
+    @media (max-width: 400px) {
+      width: 111px;
+      height: 111px;
+    }
   }
 `;
 
 const Img = styled.img`
   position: absolute;
-  transform: translateY(-50%);
-  top: 83%;
+  transform: translate(0, 90%);
+  /* top: 83%; */
   width: ${(props) => props.geologyImgWidth};
   height: ${(props) => props.geologyImgHeight};
 
   @media (max-width: 768) {
-    position: absolute;
-    left: 39px;
+    width: ${(props) => props.geologyImgWidth};
+    height: ${(props) => props.geologyImgHeight};
   }
 `;
