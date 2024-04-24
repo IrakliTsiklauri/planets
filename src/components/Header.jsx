@@ -3,12 +3,10 @@ import data from "../data.json";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import burgerImg from "../images/icon-hamburger.svg";
-console.log(data);
+import cheron from "../images/icon-chevron.svg";
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const circleBgColor = data[1].circleColor;
-  console.log(circleBgColor);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -20,14 +18,17 @@ const Header = () => {
       <BurgerButton onClick={toggleMenu}>
         <img src={burgerImg} alt="burger menu" />
       </BurgerButton>
-      <Navigation showMenu={menuOpen}>
+      <Navigation showmenu={menuOpen ? "true" : "false"}>
         <Ul>
           {data.map((planet, index) => (
             <Li key={index}>
-              <Circle></Circle>
-              <NavLinkStyled to={`${planet.name}`} onClick={toggleMenu}>
-                {planet.name.toUpperCase()}
-              </NavLinkStyled>
+              <PlanetSection>
+                <Circle></Circle>
+                <NavLinkStyled to={`${planet.name}`} onClick={toggleMenu}>
+                  {planet.name.toUpperCase()}
+                </NavLinkStyled>
+              </PlanetSection>
+              <ImgArrow src={cheron} alt="arrow" />
             </Li>
           ))}
         </Ul>
@@ -78,15 +79,6 @@ const BurgerButton = styled.div`
     cursor: pointer;
     padding: 0;
     z-index: 1;
-
-    /* div {
-      width: 30px;
-      height: 4px;
-      background: #fff;
-      transition: all 0.3s linear;
-      position: relative;
-      transform-origin: 1px;
-    } */
   }
 `;
 
@@ -94,12 +86,12 @@ const Navigation = styled.nav`
   display: flex;
 
   @media (max-width: 400px) {
-    display: ${({ showMenu }) => (showMenu ? "block" : "none")};
+    display: ${({ showmenu }) => (showmenu ? "block" : "none")};
     position: absolute;
     top: 30%;
     left: 0;
     background: #070724;
-    width: 555px;
+    width: 400px;
     height: 190%;
     padding: 20px;
     z-index: 2;
@@ -108,7 +100,7 @@ const Navigation = styled.nav`
 
 const Ul = styled.ul`
   display: flex;
-  gap: 40px;
+  gap: 30px;
 
   @media (max-width: 768px) {
     gap: 30px;
@@ -123,6 +115,18 @@ const Ul = styled.ul`
 const Li = styled.li`
   list-style-type: none;
 
+  @media (max-width: 400px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #37374e;
+    padding: 20px 20px;
+    gap: 20px;
+  }
+`;
+
+const PlanetSection = styled.div`
+  display: flex;
   @media (max-width: 400px) {
     display: flex;
     align-items: center;
@@ -150,5 +154,13 @@ const NavLinkStyled = styled(NavLink)`
   &.active {
     font-weight: 700;
     color: #fff;
+  }
+`;
+
+const ImgArrow = styled.img`
+  display: none;
+
+  @media (max-width: 400px) {
+    display: block;
   }
 `;

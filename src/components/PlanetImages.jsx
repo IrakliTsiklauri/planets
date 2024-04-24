@@ -7,8 +7,8 @@ const PlanetImages = ({
   activeImage,
   planetImgGeology,
 }) => {
-  const imgWidth = planetData.size.width;
-  const imgHeight = planetData.size.height;
+  const imgwidth = planetData.size.width;
+  const imgheight = planetData.size.height;
   const geologyImgWidth = planetData.geologiImgSize.geologyImgWidth;
   const geologyImgHeight = planetData.geologiImgSize.geologyImgHeight;
 
@@ -18,9 +18,9 @@ const PlanetImages = ({
         <Image
           src={activeImage}
           alt={planetData.name}
-          visible={true}
-          imgWidth={imgWidth}
-          imgHeight={imgHeight}
+          visible="true"
+          imgwidth={imgwidth}
+          imgheight={imgheight}
         />
       )}
       {activeBtn === "geology" && (
@@ -28,7 +28,7 @@ const PlanetImages = ({
           <Img
             src={planetImgGeology}
             alt={planetData.name}
-            visible={true}
+            visible="true"
             geologyImgWidth={geologyImgWidth}
             geologyImgHeight={geologyImgHeight}
           />
@@ -36,9 +36,9 @@ const PlanetImages = ({
           <Image
             src={activeImage}
             alt={planetData.name}
-            visible={false}
-            imgWidth={imgWidth}
-            imgHeight={imgHeight}
+            visible="false"
+            imgwidth={imgwidth}
+            imgheight={imgheight}
           />
         </>
       )}
@@ -64,12 +64,12 @@ const ImgSection = styled.div`
 `;
 
 const Image = styled.img`
-  width: ${(props) => props.imgWidth};
-  height: ${(props) => props.imgHeight};
+  width: ${(props) => props.imgwidth};
+  height: ${(props) => props.imgheight};
 
   @media (max-width: 768px) {
-    width: ${(props) => props.imgWidth};
-    height: ${(props) => props.imgHeight};
+    width: ${(props) => props.imgwidth};
+    height: ${(props) => props.imgheight};
 
     @media (max-width: 400px) {
       width: 111px;
@@ -82,11 +82,11 @@ const Img = styled.img`
   position: absolute;
   transform: translate(0, 90%);
   /* top: 83%; */
-  width: ${(props) => props.geologyImgWidth};
-  height: ${(props) => props.geologyImgHeight};
+  width: ${(props) => props.geologyimgwidth};
+  height: ${(props) => props.geologyimgheight};
 
   @media (max-width: 768) {
-    width: ${(props) => props.geologyImgWidth};
-    height: ${(props) => props.geologyImgHeight};
+    width: ${(props) => props.geologyimgwidth};
+    height: ${(props) => props.geologyimgheight};
   }
 `;
