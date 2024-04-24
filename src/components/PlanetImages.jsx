@@ -9,8 +9,8 @@ const PlanetImages = ({
 }) => {
   const imgwidth = planetData.size.width;
   const imgheight = planetData.size.height;
-  const geologyImgWidth = planetData.geologiImgSize.geologyImgWidth;
-  const geologyImgHeight = planetData.geologiImgSize.geologyImgHeight;
+  const geologyimgwidth = planetData.geologiImgSize.geologyImgWidth;
+  const geologyimgheight = planetData.geologiImgSize.geologyImgHeight;
 
   return (
     <ImgSection>
@@ -29,8 +29,8 @@ const PlanetImages = ({
             src={planetImgGeology}
             alt={planetData.name}
             visible="true"
-            geologyImgWidth={geologyImgWidth}
-            geologyImgHeight={geologyImgHeight}
+            geologyimgwidth={geologyimgwidth}
+            geologyimgheight={geologyimgheight}
           />
 
           <Image
