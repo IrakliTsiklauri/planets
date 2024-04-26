@@ -7,10 +7,16 @@ const PlanetImages = ({
   activeImage,
   planetImgGeology,
 }) => {
+  console.log(planetData);
   const imgwidth = planetData.size.width;
   const imgheight = planetData.size.height;
   const geologyimgwidth = planetData.geologiImgSize.geologyImgWidth;
   const geologyimgheight = planetData.geologiImgSize.geologyImgHeight;
+  const TabletImgWidth = planetData.tabletSize.tabWidth;
+  const tabletImgHeight = planetData.tabletSize.tabHeight;
+  const tabletGeoWidth = planetData.tabGeologyImgSize.tabGeoImgWidth;
+  const tabletGeoHeight = planetData.tabGeologyImgSize.tabGeoImgHeight;
+
 
   return (
     <ImgSection>
@@ -21,6 +27,8 @@ const PlanetImages = ({
           visible="true"
           imgwidth={imgwidth}
           imgheight={imgheight}
+          TabletImgWidth={TabletImgWidth}
+          tabletImgHeight={tabletImgHeight}
         />
       )}
       {activeBtn === "geology" && (
@@ -31,6 +39,8 @@ const PlanetImages = ({
             visible="true"
             geologyimgwidth={geologyimgwidth}
             geologyimgheight={geologyimgheight}
+            tabletGeoWidth={tabletGeoWidth}
+            tabletGeoHeight={tabletGeoHeight}
           />
 
           <Image
@@ -39,6 +49,8 @@ const PlanetImages = ({
             visible="false"
             imgwidth={imgwidth}
             imgheight={imgheight}
+            TabletImgWidth={TabletImgWidth}
+            tabletImgHeight={tabletImgHeight}
           />
         </>
       )}
@@ -53,6 +65,7 @@ const ImgSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 150px;
 
   @media (max-width: 768px) {
     margin-bottom: 150px;
@@ -68,8 +81,8 @@ const Image = styled.img`
   height: ${(props) => props.imgheight};
 
   @media (max-width: 768px) {
-    width: ${(props) => props.imgwidth};
-    height: ${(props) => props.imgheight};
+    width: ${(props) => props.TabletImgWidth};
+    height: ${(props) => props.tabletImgHeight};
 
     @media (max-width: 400px) {
       width: 111px;
@@ -82,8 +95,8 @@ const Img = styled.img`
   position: absolute;
   transform: translate(0, 90%);
   /* top: 83%; */
-  width: ${(props) => props.geologyimgwidth};
-  height: ${(props) => props.geologyimgheight};
+  width: ${(props) => props.tabletGeoWidth};
+  height: ${(props) => props.tabletGeoHeight};
 
   @media (max-width: 768) {
     width: ${(props) => props.geologyimgwidth};

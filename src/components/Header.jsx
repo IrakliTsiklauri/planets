@@ -18,7 +18,7 @@ const Header = () => {
       <BurgerButton onClick={toggleMenu}>
         <img src={burgerImg} alt="burger menu" />
       </BurgerButton>
-      <Navigation showmenu={menuOpen ? "true" : "false"}>
+      <Navigation showmenu={menuOpen}>
         <Ul>
           {data.map((planet, index) => (
             <Li key={index}>
@@ -102,8 +102,12 @@ const Ul = styled.ul`
   display: flex;
   gap: 30px;
 
+  @media (max-width: 822px) {
+    gap: 20px;
+  }
+
   @media (max-width: 768px) {
-    gap: 30px;
+    gap: 20px;
   }
 
   @media (max-width: 400px) {

@@ -84,7 +84,7 @@ const Information = styled.div`
 
 const PlanetDescription = styled.div`
   @media (max-width: 768px) {
-    width: 339px;
+    width: 50%;
   }
 
   @media (max-width: 400px) {
