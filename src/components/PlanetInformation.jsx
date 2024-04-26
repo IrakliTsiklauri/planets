@@ -40,7 +40,7 @@ const Information = styled.div`
   align-items: center;
   justify-content: center;
   gap: 30px;
-  width: 100%;
+  width: 50%;
 
   h2 {
     font-size: 80px;
@@ -69,6 +69,7 @@ const Information = styled.div`
     flex-direction: row;
     justify-content: center;
     gap: 50px;
+    width: 100%;
 
     h2 {
       font-size: 48px;

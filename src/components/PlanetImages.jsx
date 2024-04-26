@@ -12,10 +12,11 @@ const PlanetImages = ({
   const imgheight = planetData.size.height;
   const geologyimgwidth = planetData.geologiImgSize.geologyImgWidth;
   const geologyimgheight = planetData.geologiImgSize.geologyImgHeight;
-  const TabletImgWidth = planetData.tabletSize.tabWidth;
-  const tabletImgHeight = planetData.tabletSize.tabHeight;
+  const tabletimgwidth = planetData.tabletSize.tabWidth;
+  const tabletimgheight = planetData.tabletSize.tabHeight;
   const tabletGeoWidth = planetData.tabGeologyImgSize.tabGeoImgWidth;
   const tabletGeoHeight = planetData.tabGeologyImgSize.tabGeoImgHeight;
+  console.log(tabletGeoWidth,tabletGeoHeight)
 
 
   return (
@@ -27,8 +28,8 @@ const PlanetImages = ({
           visible="true"
           imgwidth={imgwidth}
           imgheight={imgheight}
-          TabletImgWidth={TabletImgWidth}
-          tabletImgHeight={tabletImgHeight}
+          tabletimgwidth={tabletimgwidth}
+          tabletimgheight={tabletimgheight}
         />
       )}
       {activeBtn === "geology" && (
@@ -49,8 +50,8 @@ const PlanetImages = ({
             visible="false"
             imgwidth={imgwidth}
             imgheight={imgheight}
-            TabletImgWidth={TabletImgWidth}
-            tabletImgHeight={tabletImgHeight}
+            tabletimgwidth={tabletimgwidth}
+            tabletimgheight={tabletimgheight}
           />
         </>
       )}
@@ -81,8 +82,8 @@ const Image = styled.img`
   height: ${(props) => props.imgheight};
 
   @media (max-width: 768px) {
-    width: ${(props) => props.TabletImgWidth};
-    height: ${(props) => props.tabletImgHeight};
+    width: ${(props) => props.tabletimgwidth};
+    height: ${(props) => props.tabletimgheight};
 
     @media (max-width: 400px) {
       width: 111px;
@@ -95,11 +96,11 @@ const Img = styled.img`
   position: absolute;
   transform: translate(0, 90%);
   /* top: 83%; */
-  width: ${(props) => props.tabletGeoWidth};
-  height: ${(props) => props.tabletGeoHeight};
+  width: ${(props) => props.geologyimgwidth};
+  height: ${(props) => props.geologyimgheight};
 
-  @media (max-width: 768) {
-    width: ${(props) => props.geologyimgwidth};
-    height: ${(props) => props.geologyimgheight};
+  @media (max-width: 768px) {
+    width: ${(props) => props.tabletGeoWidth};
+    height: ${(props) => props.tabletGeoHeight};
   }
 `;

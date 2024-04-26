@@ -67,7 +67,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  /* width: 65%; */
+  /* width: 120%; */
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
