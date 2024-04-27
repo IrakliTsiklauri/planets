@@ -5,6 +5,7 @@ import styled from "styled-components";
 import PlanetImages from "./PlanetImages";
 import PlanetInformation from "./PlanetInformation";
 import PlanetStats from "./PlanetStats";
+import PlanetMobileBtns from "./PlanetMobileBtns";
 
 const Planet = () => {
   const params = useParams();
@@ -30,6 +31,7 @@ const Planet = () => {
 
   return (
     <Wrapper>
+      <PlanetMobileBtns planetData={planetData} handleBtnClick={handleBtnClick}/>
       <Container>
         <PlanetImages
           activeImage={activeImage}
@@ -59,6 +61,10 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 20px;
+
+  @media (max-width: 400px) {
+    padding: 0;
+  }
 `;
 
 const Container = styled.div`
