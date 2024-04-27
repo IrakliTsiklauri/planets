@@ -6,6 +6,7 @@ import PlanetImages from "./PlanetImages";
 import PlanetInformation from "./PlanetInformation";
 import PlanetStats from "./PlanetStats";
 import PlanetMobileBtns from "./PlanetMobileBtns";
+import Header from "./Header";
 
 const Planet = () => {
   const params = useParams();
@@ -30,26 +31,32 @@ const Planet = () => {
       : planetImgOverview;
 
   return (
-    <Wrapper>
-      <PlanetMobileBtns planetData={planetData} handleBtnClick={handleBtnClick}/>
-      <Container>
-        <PlanetImages
-          activeImage={activeImage}
-          activeBtn={activeBtn}
+    <>
+      <Header planetData={planetData} />
+      <Wrapper>
+        <PlanetMobileBtns
           planetData={planetData}
-          planetImgOverview={planetImgOverview}
-          planetImgStrucure={planetImgStrucure}
-          planetImgGeology={planetImgGeology}
-        />
-
-        <PlanetInformation
-          planetData={planetData}
-          activeBtn={activeBtn}
           handleBtnClick={handleBtnClick}
         />
-      </Container>
-      <PlanetStats planetData={planetData} />
-    </Wrapper>
+        <Container>
+          <PlanetImages
+            activeImage={activeImage}
+            activeBtn={activeBtn}
+            planetData={planetData}
+            planetImgOverview={planetImgOverview}
+            planetImgStrucure={planetImgStrucure}
+            planetImgGeology={planetImgGeology}
+          />
+
+          <PlanetInformation
+            planetData={planetData}
+            activeBtn={activeBtn}
+            handleBtnClick={handleBtnClick}
+          />
+        </Container>
+        <PlanetStats planetData={planetData} />
+      </Wrapper>
+    </>
   );
 };
 

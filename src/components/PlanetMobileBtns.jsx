@@ -2,9 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const PlanetMobileBtns = ({ planetData, handleBtnClick }) => {
-  //   const btnsName = planetData.MobileBtns.overview;
-  //   console.log(btnsName);
-
   return (
     <MobileBtns>
       <MobileBtn onClick={() => handleBtnClick("overview")}>

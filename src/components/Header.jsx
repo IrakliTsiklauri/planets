@@ -5,13 +5,13 @@ import styled from "styled-components";
 import burgerImg from "../images/icon-hamburger.svg";
 import cheron from "../images/icon-chevron.svg";
 
-const Header = () => {
+const Header = ({ planetData }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const circleBgColor = planetData.circleColor;
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-
-   
   };
 
   return (
@@ -25,8 +25,8 @@ const Header = () => {
           {data.map((planet, index) => (
             <Li key={index}>
               <PlanetSection>
-                <Circle></Circle>
-                <NavLinkStyled to={`${planet.name}`} onClick={toggleMenu}>
+                <Circle circleBgColor={circleBgColor}></Circle>
+                <NavLinkStyled to={`/${planet.name}`} onClick={toggleMenu}>
                   {planet.name.toUpperCase()}
                 </NavLinkStyled>
               </PlanetSection>
@@ -90,7 +90,7 @@ const Navigation = styled.nav`
   @media (max-width: 400px) {
     display: ${({ showmenu }) => (showmenu ? "block" : "none")};
     position: absolute;
-    top: 30%;
+    top: 21%;
     left: 0;
     background: #070724;
     width: 400px;
@@ -144,7 +144,7 @@ const Circle = styled.div`
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: red;
+  background-color: ${(props) => props.circleBgColor};
   display: none;
 
   @media (max-width: 400px) {
