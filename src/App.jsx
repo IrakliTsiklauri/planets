@@ -2,7 +2,10 @@ import Header from "./components/Header";
 import Planet from "./components/Planet";
 import { Routes, Route, Navigate } from "react-router-dom";
 
+
 function App() {
+
+  
   return (
     <>
       <Header />

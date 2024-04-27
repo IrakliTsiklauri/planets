@@ -7,7 +7,6 @@ const PlanetImages = ({
   activeImage,
   planetImgGeology,
 }) => {
-  console.log(planetData);
   const imgwidth = planetData.size.width;
   const imgheight = planetData.size.height;
   const geologyimgwidth = planetData.geologiImgSize.geologyImgWidth;
@@ -16,8 +15,6 @@ const PlanetImages = ({
   const tabletimgheight = planetData.tabletSize.tabHeight;
   const tabletGeoWidth = planetData.tabGeologyImgSize.tabGeoImgWidth;
   const tabletGeoHeight = planetData.tabGeologyImgSize.tabGeoImgHeight;
-  console.log(tabletGeoWidth,tabletGeoHeight)
-
 
   return (
     <ImgSection>
@@ -66,10 +63,10 @@ const ImgSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 150px;
+  /* margin-bottom: 150px; */
 
   @media (max-width: 768px) {
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
   }
 
   @media (max-width: 400px) {

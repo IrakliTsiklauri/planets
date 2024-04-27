@@ -35,12 +35,14 @@ const PlanetInformation = ({ planetData, activeBtn, handleBtnClick }) => {
 export default PlanetInformation;
 
 const Information = styled.div`
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 30px;
-  width: 50%;
+
+  /* padding: 296px; */
 
   h2 {
     font-size: 80px;
@@ -84,6 +86,7 @@ const Information = styled.div`
 `;
 
 const PlanetDescription = styled.div`
+  width: 100%;
   @media (max-width: 768px) {
     width: 50%;
   }
