@@ -39,7 +39,7 @@
       "height": "26%"
     },
     "tabletSize": { "tabWidth": "25%", "tabHeight": "25%" },
-    "mobileSize": { "mobWidth": "12%", "mobHeight": "28%" },
+    "mobileSize": { "mobWidth": "22%", "mobHeight": "22%" },
     "geologiImgSize": {
       "geologyImgWidth": "11%",
       "geologyImgHeight": "50%"
@@ -47,6 +47,10 @@
     "tabGeologyImgSize": {
       "tabGeoImgWidth": "11%",
       "tabGeoImgHeight": "50%"
+    },
+    "mobileGeologiImgSize": {
+      "mobGeoImgWidth": "10%",
+      "mobGeoImgHeight": "50%"
     }
   },
   {
@@ -86,7 +90,7 @@
     "circleColor": "rgba(247, 204, 127, 1)",
     "size": { "width": "29%", "height": "29%" },
     "tabletSize": { "tabWidth": "33%", "tabHeight": "33%" },
-    "mobileSize": { "mobWidth": "28%", "mobHeight": "28%" },
+    "mobileSize": { "mobWidth": "25%", "mobHeight": "25%" },
     "geologiImgSize": {
       "geologyImgWidth": "12%",
       "geologyImgHeight": "50%"
@@ -94,6 +98,10 @@
     "tabGeologyImgSize": {
       "tabGeoImgWidth": "14%",
       "tabGeoImgHeight": "50%"
+    },
+    "mobileGeologiImgSize": {
+      "mobGeoImgWidth": "11%",
+      "mobGeoImgHeight": "50%"
     }
   },
   {
@@ -141,6 +149,10 @@
     "tabGeologyImgSize": {
       "tabGeoImgWidth": "16%",
       "tabGeoImgHeight": "50%"
+    },
+    "mobileGeologiImgSize": {
+      "mobGeoImgWidth": "12%",
+      "mobGeoImgHeight": "50%"
     }
   },
   {
@@ -180,7 +192,7 @@
     "circleColor": "rgba(255, 106, 69, 1)",
     "size": { "width": "29%", "height": "29%" },
     "tabletSize": { "tabWidth": "28%", "tabHeight": "28%" },
-    "mobileSize": { "mobWidth": "28%", "mobHeight": "28%" },
+    "mobileSize": { "mobWidth": "22%", "mobHeight": "22%" },
     "geologiImgSize": {
       "geologyImgWidth": "13%",
       "geologyImgHeight": "50%"
@@ -188,6 +200,10 @@
     "tabGeologyImgSize": {
       "tabGeoImgWidth": "12%",
       "tabGeoImgHeight": "50%"
+    },
+    "mobileGeologiImgSize": {
+      "mobGeoImgWidth": "10%",
+      "mobGeoImgHeight": "50%"
     }
   },
   {
@@ -227,7 +243,7 @@
     "circleColor": "rgba(236, 173, 122, 1)",
     "size": { "width": "52%", "height": "52%" },
     "tabletSize": { "tabWidth": "50%", "tabHeight": "50%" },
-    "mobileSize": { "mobWidth": "28%", "mobHeight": "28%" },
+    "mobileSize": { "mobWidth": "38%", "mobHeight": "38%" },
     "geologiImgSize": {
       "geologyImgWidth": "15%",
       "geologyImgHeight": "32%"
@@ -235,6 +251,10 @@
     "tabGeologyImgSize": {
       "tabGeoImgWidth": "14%",
       "tabGeoImgHeight": "33%"
+    },
+    "mobileGeologiImgSize": {
+      "mobGeoImgWidth": "11%",
+      "mobGeoImgHeight": "33%"
     }
   },
   {
@@ -274,7 +294,7 @@
     "circleColor": "rgba(252, 203, 107, 1)",
     "size": { "width": "30%", "height": "30%" },
     "tabletSize": { "tabWidth": "33%", "tabHeight": "33%" },
-    "mobileSize": { "mobWidth": "28%", "mobHeight": "28%" },
+    "mobileSize": { "mobWidth": "27%", "mobHeight": "27%" },
     "geologiImgSize": {
       "geologyImgWidth": "11%",
       "geologyImgHeight": "42%"
@@ -282,6 +302,10 @@
     "tabGeologyImgSize": {
       "tabGeoImgWidth": "11%",
       "tabGeoImgHeight": "38%"
+    },
+    "mobileGeologiImgSize": {
+      "mobGeoImgWidth": "11%",
+      "mobGeoImgHeight": "46%"
     }
   },
   {
@@ -321,6 +345,7 @@
     "circleColor": "rgba(101, 240, 213, 1)",
     "size": { "width": "29%", "height": "29%" },
     "tabletSize": { "mobWidth": "34%", "mobHeight": "34%" },
+    "mobileSize": { "mobWidth": "27%", "mobHeight": "27%" },
     "geologiImgSize": {
       "geologyImgWidth": "12%",
       "geologyImgHeight": "50%"
@@ -328,6 +353,10 @@
     "tabGeologyImgSize": {
       "tabGeoImgWidth": "13%",
       "tabGeoImgHeight": "46%"
+    },
+    "mobileGeologiImgSize": {
+      "mobGeoImgWidth": "12%",
+      "mobGeoImgHeight": "50%"
     }
   },
   {
@@ -375,6 +404,10 @@
     "tabGeologyImgSize": {
       "tabGeoImgWidth": "15%",
       "tabGeoImgHeight": "50%"
+    },
+    "mobileGeologiImgSize": {
+      "mobGeoImgWidth": "12%",
+      "mobGeoImgHeight": "50%"
     }
   }
 ]
