@@ -17,8 +17,8 @@ const PlanetImages = ({
   const tabletGeoHeight = planetData.tabGeologyImgSize.tabGeoImgHeight;
   const mobileImgWidth = planetData.mobileSize.mobWidth;
   const mobileImgHeight = planetData.mobileSize.mobHeight;
-  const mobileGeoImgWidth = planetData.mobileGeologiImgSize.mobGeoImgWidth;
-  const mobileGeoImgHeight = planetData.mobileGeologiImgSize.mobGeoImgHeight;
+  const mobileGeoImgWidth = planetData?.mobileGeologyImgSize?.mobGeoImgWidth;
+  const mobileGeoImgHeight = planetData?.mobileGeologyImgSize?.mobGeoImgHeight;
 
   return (
     <ImgSection>
@@ -73,10 +73,8 @@ const ImgSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-bottom: 150px; */
 
   @media (max-width: 768px) {
-    /* margin-bottom: 150px; */
   }
 
   @media (max-width: 400px) {
