@@ -17,8 +17,8 @@ const PlanetImages = ({
   const tabletGeoHeight = planetData.tabGeologyImgSize.tabGeoImgHeight;
   const mobileImgWidth = planetData.mobileSize.mobWidth;
   const mobileImgHeight = planetData.mobileSize.mobHeight;
-  const mobileGeoImgWidth = planetData?.mobileGeologyImgSize?.mobGeoImgWidth;
-  const mobileGeoImgHeight = planetData?.mobileGeologyImgSize?.mobGeoImgHeight;
+  const mobileGeoImgWidth = planetData.mobileGeologyImgSize.mobGeoImgWidth;
+  const mobileGeoImgHeight = planetData.mobileGeologyImgSize.mobGeoImgHeight;
 
   return (
     <ImgSection>

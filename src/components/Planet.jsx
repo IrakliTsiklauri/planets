@@ -32,7 +32,7 @@ const Planet = () => {
 
   return (
     <>
-      <Header planetData={planetData} />
+      <Header/>
       <Wrapper>
         <PlanetMobileBtns
           planetData={planetData}

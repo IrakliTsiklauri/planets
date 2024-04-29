@@ -5,10 +5,11 @@ import styled from "styled-components";
 import burgerImg from "../images/icon-hamburger.svg";
 import cheron from "../images/icon-chevron.svg";
 
-const Header = ({ planetData }) => {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const circleBgColor = planetData.circleColor;
+  const circleBgColor = data.map((planet)=> planet.circleColor);
+  console.log(circleBgColor)
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -25,7 +26,7 @@ const Header = ({ planetData }) => {
           {data.map((planet, index) => (
             <Li key={index}>
               <PlanetSection>
-                <Circle circleBgColor={circleBgColor}></Circle>
+                <Circle circleBgColor={planet.circleColor}></Circle>
                 <NavLinkStyled to={`/${planet.name}`} onClick={toggleMenu}>
                   {planet.name.toUpperCase()}
                 </NavLinkStyled>

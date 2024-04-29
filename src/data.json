@@ -48,7 +48,7 @@
       "tabGeoImgWidth": "11%",
       "tabGeoImgHeight": "50%"
     },
-    "mobileGeologiImgSize": {
+    "mobileGeologyImgSize": {
       "mobGeoImgWidth": "10%",
       "mobGeoImgHeight": "50%"
     }
@@ -99,7 +99,7 @@
       "tabGeoImgWidth": "14%",
       "tabGeoImgHeight": "50%"
     },
-    "mobileGeologiImgSize": {
+    "mobileGeologyImgSize": {
       "mobGeoImgWidth": "11%",
       "mobGeoImgHeight": "50%"
     }
@@ -150,7 +150,7 @@
       "tabGeoImgWidth": "16%",
       "tabGeoImgHeight": "50%"
     },
-    "mobileGeologiImgSize": {
+    "mobileGeologyImgSize": {
       "mobGeoImgWidth": "12%",
       "mobGeoImgHeight": "50%"
     }
@@ -201,7 +201,7 @@
       "tabGeoImgWidth": "12%",
       "tabGeoImgHeight": "50%"
     },
-    "mobileGeologiImgSize": {
+    "mobileGeologyImgSize": {
       "mobGeoImgWidth": "10%",
       "mobGeoImgHeight": "50%"
     }
@@ -252,7 +252,7 @@
       "tabGeoImgWidth": "14%",
       "tabGeoImgHeight": "33%"
     },
-    "mobileGeologiImgSize": {
+    "mobileGeologyImgSize": {
       "mobGeoImgWidth": "11%",
       "mobGeoImgHeight": "33%"
     }
@@ -303,7 +303,7 @@
       "tabGeoImgWidth": "11%",
       "tabGeoImgHeight": "38%"
     },
-    "mobileGeologiImgSize": {
+    "mobileGeologyImgSize": {
       "mobGeoImgWidth": "11%",
       "mobGeoImgHeight": "46%"
     }
@@ -354,7 +354,7 @@
       "tabGeoImgWidth": "13%",
       "tabGeoImgHeight": "46%"
     },
-    "mobileGeologiImgSize": {
+    "mobileGeologyImgSize": {
       "mobGeoImgWidth": "12%",
       "mobGeoImgHeight": "50%"
     }
