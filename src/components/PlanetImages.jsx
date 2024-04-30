@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+// import { styled, keyframes } from "styled-components";
 
 const PlanetImages = ({
   activeBtn,
