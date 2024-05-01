@@ -8,8 +8,7 @@ import cheron from "../images/icon-chevron.svg";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const circleBgColor = data.map((planet)=> planet.circleColor);
-  console.log(circleBgColor)
+  // const circleBgColor = data.map((planet)=> planet.circleColor);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -26,7 +25,7 @@ const Header = () => {
           {data.map((planet, index) => (
             <Li key={index}>
               <PlanetSection>
-                <Circle circleBgColor={planet.circleColor}></Circle>
+                <Circle circlebgcolor={planet.circleColor}></Circle>
                 <NavLinkStyled to={`/${planet.name}`} onClick={toggleMenu}>
                   {planet.name.toUpperCase()}
                 </NavLinkStyled>
@@ -77,7 +76,7 @@ const BurgerButton = styled.div`
     justify-content: center;
     width: 30px;
     height: 30px;
-    background: transparent;
+    background-color: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
@@ -93,7 +92,7 @@ const Navigation = styled.nav`
     position: absolute;
     top: 21%;
     left: 0;
-    background: #070724;
+    background-color: #070724;
     width: 400px;
     height: 190%;
     padding: 20px;

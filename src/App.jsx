@@ -1,4 +1,4 @@
-import ErrorPage from "./pages/ErrorPage";
+import React from "react";
 import Planet from "./components/Planet";
 import { Routes, Route, Navigate } from "react-router-dom";
 
@@ -7,7 +7,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Navigate to={"/Mercury"} />}></Route>
       <Route path="/:name" element={<Planet />}></Route>
-      <Route path="*" element={<ErrorPage />}></Route>
+      {/* <Route path="*" element={<Error />} /> */}
     </Routes>
   );
 }

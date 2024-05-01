@@ -14,12 +14,12 @@ const PlanetImages = ({
   const geologyimgheight = planetData.geologiImgSize.geologyImgHeight;
   const tabletimgwidth = planetData.tabletSize.tabWidth;
   const tabletimgheight = planetData.tabletSize.tabHeight;
-  const tabletGeoWidth = planetData.tabGeologyImgSize.tabGeoImgWidth;
-  const tabletGeoHeight = planetData.tabGeologyImgSize.tabGeoImgHeight;
-  const mobileImgWidth = planetData.mobileSize.mobWidth;
-  const mobileImgHeight = planetData.mobileSize.mobHeight;
-  const mobileGeoImgWidth = planetData.mobileGeologyImgSize.mobGeoImgWidth;
-  const mobileGeoImgHeight = planetData.mobileGeologyImgSize.mobGeoImgHeight;
+  const tabletgeowidth = planetData.tabGeologyImgSize.tabGeoImgWidth;
+  const tabletgeoheight = planetData.tabGeologyImgSize.tabGeoImgHeight;
+  const mobileimgwidth = planetData.mobileSize.mobWidth;
+  const mobileimgheight = planetData.mobileSize.mobHeight;
+  const mobilegeoimgwidth = planetData.mobileGeologyImgSize.mobGeoImgWidth;
+  const mobilegeoimgheight = planetData.mobileGeologyImgSize.mobGeoImgHeight;
 
   return (
     <ImgSection>
@@ -32,8 +32,8 @@ const PlanetImages = ({
           imgheight={imgheight}
           tabletimgwidth={tabletimgwidth}
           tabletimgheight={tabletimgheight}
-          mobileImgWidth={mobileImgWidth}
-          mobileImgHeight={mobileImgHeight}
+          mobileimgwidth={mobileimgwidth}
+          mobileimgheight={mobileimgheight}
         />
       )}
       {activeBtn === "geology" && (
@@ -44,10 +44,10 @@ const PlanetImages = ({
             visible="true"
             geologyimgwidth={geologyimgwidth}
             geologyimgheight={geologyimgheight}
-            tabletGeoWidth={tabletGeoWidth}
-            tabletGeoHeight={tabletGeoHeight}
-            mobileGeoImgWidth={mobileGeoImgWidth}
-            mobileGeoImgHeight={mobileGeoImgHeight}
+            tabletgeowidth={tabletgeowidth}
+            tabletgeoheight={tabletgeoheight}
+            mobilegeoimgwidth={mobilegeoimgwidth}
+            mobilegeoimgheight={mobilegeoimgheight}
           />
 
           <Image
@@ -58,8 +58,8 @@ const PlanetImages = ({
             imgheight={imgheight}
             tabletimgwidth={tabletimgwidth}
             tabletimgheight={tabletimgheight}
-            mobileImgWidth={mobileImgWidth}
-            mobileImgHeight={mobileImgHeight}
+            mobileimgwidth={mobileimgwidth}
+            mobileimgheight={mobileimgheight}
           />
         </>
       )}
@@ -92,8 +92,8 @@ const Image = styled.img`
     height: ${(props) => props.tabletimgheight};
   }
   @media (max-width: 400px) {
-    width: ${(props) => props.mobileImgWidth};
-    height: ${(props) => props.mobileImgHeight};
+    width: ${(props) => props.mobileimgwidth};
+    height: ${(props) => props.mobileimgheight};
   }
 `;
 
@@ -104,12 +104,12 @@ const Img = styled.img`
   height: ${(props) => props.geologyimgheight};
 
   @media (max-width: 768px) {
-    width: ${(props) => props.tabletGeoWidth};
-    height: ${(props) => props.tabletGeoHeight};
+    width: ${(props) => props.tabletgeowidth};
+    height: ${(props) => props.tabletgeoheight};
   }
 
   @media (max-width: 400px) {
-    width: ${(props) => props.mobileGeoImgWidth};
-    height: ${(props) => props.mobileGeoImgHeight};
+    width: ${(props) => props.mobilegeoimgwidth};
+    height: ${(props) => props.mobilegeoimgheight};
   }
 `;

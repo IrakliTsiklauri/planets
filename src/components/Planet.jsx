@@ -7,6 +7,7 @@ import PlanetInformation from "./PlanetInformation";
 import PlanetStats from "./PlanetStats";
 import PlanetMobileBtns from "./PlanetMobileBtns";
 import Header from "./Header";
+import ErrorPage from "../pages/ErrorPage";
 
 const Planet = () => {
   const params = useParams();
@@ -18,6 +19,10 @@ const Planet = () => {
   const handleBtnClick = (btnName) => {
     setActiveBtn(btnName);
   };
+
+  if(!planetData){
+    return <ErrorPage/>
+  }
 
   const planetImgOverview = planetData.images.planet;
   const planetImgStrucure = planetData.images.internal;
