@@ -20,8 +20,8 @@ const Planet = () => {
     setActiveBtn(btnName);
   };
 
-  if(!planetData){
-    return <ErrorPage/>
+  if (!planetData) {
+    return <ErrorPage />;
   }
 
   const planetImgOverview = planetData.images.planet;
@@ -37,7 +37,7 @@ const Planet = () => {
 
   return (
     <>
-      <Header/>
+      <Header />
       <Wrapper>
         <PlanetMobileBtns
           planetData={planetData}

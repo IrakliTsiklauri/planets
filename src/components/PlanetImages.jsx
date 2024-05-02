@@ -38,7 +38,7 @@ const PlanetImages = ({
       )}
       {activeBtn === "geology" && (
         <>
-          <Img
+          <GeologyImg
             src={planetImgGeology}
             alt={planetData.name}
             visible="true"
@@ -97,11 +97,12 @@ const Image = styled.img`
   }
 `;
 
-const Img = styled.img`
+const GeologyImg = styled.img`
   position: absolute;
   transform: translate(0, 90%);
   width: ${(props) => props.geologyimgwidth};
   height: ${(props) => props.geologyimgheight};
+  z-index: 1;
 
   @media (max-width: 768px) {
     width: ${(props) => props.tabletgeowidth};
