@@ -7,7 +7,10 @@ const ErrorPage = () => {
     <ErrorSection>
       <ErrorText>
         <h1>Page Not Found</h1>
-        <p>Houston, we have a problem...</p>
+        <Call>
+          <span>🚀🐱‍🚀📢:</span>
+          <Text>Houston, we have a problem...</Text>
+        </Call>
       </ErrorText>
       <ErrorImg>
         <img src={austronaut} alt="austronaut" />
@@ -24,15 +27,12 @@ const ErrorSection = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  /* gap: 20%; */
-`;
 
-// const ErrorContent = styled.div`
-//   display: flex;
-//   /* flex-direction: column; */
-//   align-items: center;
-//   text-align: center;
-// `;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 50px;
+  }
+`;
 
 const ErrorText = styled.div`
   display: flex;
@@ -44,11 +44,25 @@ const ErrorText = styled.div`
 
   h1 {
     font-size: 45px;
+    color: #5c5454;
   }
 
   p {
     font-size: 20px;
+    color: #7a6464;
   }
+`;
+const Call = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+const Text = styled.p`
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
 `;
 const ErrorImg = styled.div`
   display: flex;
@@ -61,6 +75,10 @@ const ErrorImg = styled.div`
     height: 500px;
     position: relative;
     animation: moveImage 4s infinite;
+
+    @media (max-width: 1200px) {
+      height: 300px;
+    }
   }
 
   @keyframes moveImage {
@@ -69,7 +87,7 @@ const ErrorImg = styled.div`
       top: 0px;
     }
     50% {
-      top: 100px;
+      top: -70px;
     }
     100% {
       left: 0px;
