@@ -23,7 +23,7 @@ const Header = () => {
       <Navigation showmenu={menuOpen}>
         <Ul>
           {data.map((planet, index) => (
-            <Li key={index}>
+            <List key={index}>
               <PlanetSection>
                 <Circle circlebgcolor={planet.circleColor}></Circle>
                 <NavLinkStyled to={`/${planet.name}`} onClick={toggleMenu}>
@@ -31,7 +31,7 @@ const Header = () => {
                 </NavLinkStyled>
               </PlanetSection>
               <ImgArrow src={cheron} alt="arrow" />
-            </Li>
+            </List>
           ))}
         </Ul>
       </Navigation>
@@ -118,7 +118,7 @@ const Ul = styled.ul`
   }
 `;
 
-const Li = styled.li`
+const List = styled.li`
   list-style-type: none;
 
   @media (max-width: 400px) {

@@ -24,8 +24,15 @@ const ErrorSection = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  gap: 20%;
+  /* gap: 20%; */
 `;
+
+// const ErrorContent = styled.div`
+//   display: flex;
+//   /* flex-direction: column; */
+//   align-items: center;
+//   text-align: center;
+// `;
 
 const ErrorText = styled.div`
   display: flex;
@@ -33,9 +40,10 @@ const ErrorText = styled.div`
   align-items: center;
   justify-content: center;
   gap: 40px;
+  width: 100%;
 
   h1 {
-    font-size: 50px;
+    font-size: 45px;
   }
 
   p {
@@ -46,4 +54,26 @@ const ErrorImg = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  width: 100%;
+
+  img {
+    height: 300px;
+    position: relative;
+    animation: moveImage 4s infinite;
+  }
+
+  @keyframes moveImage {
+    0% {
+      left: 0px;
+      top: 0px;
+    }
+    50% {
+      top: 100px;
+    }
+    100% {
+      left: 0px;
+      top: 0px;
+    }
+  }
 `;
