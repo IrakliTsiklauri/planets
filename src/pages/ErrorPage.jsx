@@ -58,7 +58,7 @@ const ErrorImg = styled.div`
   width: 100%;
 
   img {
-    height: 300px;
+    height: 500px;
     position: relative;
     animation: moveImage 4s infinite;
   }

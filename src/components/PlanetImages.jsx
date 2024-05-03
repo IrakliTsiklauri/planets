@@ -84,6 +84,10 @@ const ImgSection = styled.div`
 `;
 
 const Image = styled.img`
+  position: relative;
+  width: 200px;
+  height: auto;
+  animation: flipImage 4s infinite;
   width: ${(props) => props.imgwidth};
   height: ${(props) => props.imgheight};
 
@@ -94,6 +98,18 @@ const Image = styled.img`
   @media (max-width: 400px) {
     width: ${(props) => props.mobileimgwidth};
     height: ${(props) => props.mobileimgheight};
+  }
+
+  @keyframes flipImage {
+    0% {
+      transform: perspective(800px) rotateY(0deg);
+    }
+    50% {
+      transform: perspective(800px) rotateY(180deg);
+    }
+    100% {
+      transform: perspective(800px) rotateY(360deg);
+    }
   }
 `;
 
