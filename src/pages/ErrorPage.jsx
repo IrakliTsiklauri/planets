@@ -8,7 +8,7 @@ const ErrorPage = () => {
       <ErrorText>
         <h1>Page Not Found</h1>
         <Call>
-          <span>🚀🐱‍🚀📢:</span>
+          <Span>🚀🐱‍🚀🎙⚠</Span>
           <Text>Houston, we have a problem...</Text>
         </Call>
       </ErrorText>
@@ -46,16 +46,11 @@ const ErrorText = styled.div`
     font-size: 45px;
     color: #5c5454;
   }
-
-  p {
-    font-size: 20px;
-    color: #7a6464;
-  }
 `;
 const Call = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 `;
 
 const Text = styled.p`
@@ -63,7 +58,25 @@ const Text = styled.p`
   text-align: center;
   align-items: center;
   gap: 10px;
+  font-size: 20px;
+  color: #d7d1d1;
+  animation: emergencyCall 2s infinite;
+
+  @keyframes emergencyCall {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
 `;
+
+const Span = styled.span`
+  font-size: 40px;
+`;
+
 const ErrorImg = styled.div`
   display: flex;
   align-items: center;
