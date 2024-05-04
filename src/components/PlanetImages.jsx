@@ -119,6 +119,23 @@ const GeologyImg = styled.img`
   width: ${(props) => props.geologyimgwidth};
   height: ${(props) => props.geologyimgheight};
   z-index: 1;
+  animation: geoImgAnim 2s infinite;
+
+@keyframes geoImgAnim {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  25% {
+    opacity: 0.5;
+  }
+}
 
   @media (max-width: 768px) {
     width: ${(props) => props.tabletgeowidth};
