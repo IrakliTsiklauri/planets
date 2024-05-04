@@ -8,7 +8,7 @@ const ErrorPage = () => {
       <ErrorText>
         <h1>Page Not Found</h1>
         <Call>
-          <Span>🚀🐱‍🚀🎙⚠</Span>
+          <Span>🚀🐱‍🚀🆘</Span>
           <Text>Houston, we have a problem...</Text>
         </Call>
       </ErrorText>

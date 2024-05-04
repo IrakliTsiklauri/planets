@@ -119,23 +119,22 @@ const GeologyImg = styled.img`
   width: ${(props) => props.geologyimgwidth};
   height: ${(props) => props.geologyimgheight};
   z-index: 1;
-  animation: geoImgAnim 2s infinite;
+  animation: geoImgAnim 3s infinite;
 
-@keyframes geoImgAnim {
-  0%,
-  100% {
-    opacity: 0;
+  @keyframes geoImgAnim {
+    100% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    25% {
+      opacity: 0.25%;
+    }
   }
-  75% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.75;
-  }
-  25% {
-    opacity: 0.5;
-  }
-}
 
   @media (max-width: 768px) {
     width: ${(props) => props.tabletgeowidth};
