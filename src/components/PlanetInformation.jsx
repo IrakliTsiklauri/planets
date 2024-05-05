@@ -18,7 +18,18 @@ const PlanetInformation = ({ planetData, activeBtn, handleBtnClick }) => {
         </p>
         <Wikipedia>
           <span>
-            Source: <Link to={`${planetData.overview.source}`}>Wikipedia</Link>
+            Source:{" "}
+            <Link
+              to={
+                activeBtn === "overview"
+                  ? `${planetData.overview.source}`
+                  : activeBtn === "structure"
+                  ? `${planetData.structure.source}`
+                  : planetData.geology.source
+              }
+            >
+              Wikipedia
+            </Link>
           </span>
           <img src={shape} alt="arrow" />
         </Wikipedia>
